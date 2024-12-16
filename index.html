@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EotE Roller</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+<body>
+    
+    <div class="container">
+        
+
+        <div class="row">        
+            <div class="col-md-6">
+                
+                    <div id="set_dices_box">
+                        
+                        <h2>Tap a dice to select</h2>
+                        <ul id="dices_list">
+                            <li id="add_boost"><img src="img/dices/boost.png" alt="boost.png"></li>
+                            <li id="add_setback"><img src="img/dices/setback.png" alt="setback.png"></li>
+                            <li id="add_ab"><img src="img/dices/ab.png" alt="ab.png"></li>
+                            <li id="add_dif"><img src="img/dices/dif.png" alt="dif.png"></li>
+                            <li id="add_prof"><img src="img/dices/prof.png" alt="prof.png"></li>
+                            <li id="add_ch"><img src="img/dices/ch.png" alt="ch.png"></li>
+                            <li id="add_force"><img src="img/dices/force.png" alt="force.png"></li>
+                            <li id="add_d10"><img src="img/dices/d10.gif" alt="d10.png"></li>
+                        </ul>
+                
+                        <form id ="roll_form" class="hidden" name="roll_form" method = "post" action = "add_roll.php">
+                            <input  type="hidden" value="admin" name="user" id="user"/>
+                            <br>
+                            Boost <input type="number" min = "0" max="5" step="1" value="0" name="boost" id="boost"/>
+                            <br>
+                            Setback <input type="number" min = "0" max="5" step="1" value="0" name="setback" id="setback"/>
+                            <br>
+                            Ability <input type="number" min = "0" max="5" step="1" value="0" name="ab" id="ab"/>
+                            <br>
+                            Difficulty <input type="number" min = "0" max="5" step="1" value="0" name="dif" id="dif"/>
+                            <br>
+                            Proficiency <input type="number" min = "0" max="5" step="1" value="0" name="prof" id="prof"/>
+                            <br>
+                            Challenge <input type="number" min = "0" max="5" step="1" value="0" name="ch" id="ch"/>
+                            <br>
+                            Force <input type="number" min = "0" max="1" step="1" value="0" name="force" id="force"/>
+                            <br>
+                            d10 <input type="number" min = "0" max="1" step="1" value="0" name="d10" id="d10"/>
+                            <br>
+                            <input type="submit" value="Submit"/>
+                        </form>
+                    </div>
+                    
+                    <div id="chosen_dices_box">
+                        
+                        <ul id="chosen_dices_list">
+                        </ul>
+                            
+                    </div>
+                    
+                    <br>
+                    <button id ="reset">Reset</button>
+                
+                </div>
+            </div>
+            
+            
+        <div class="row">
+            <div class="col-md-6">
+    
+                <div id="results_box" style="width:600px; height:150px; margin: 20px; background: #f4f4f4;">
+                    <ul id="results_list">
+            
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+        
+    </div> <!-- / container end -->
+    
+    <script type="text/javascript" src="js/jquery2.js"></script>
+    <script type="text/javascript" src="js/dices.js"></script>
+    <script type="text/javascript" src="js/add_roll.js"></script>
+</body>
+</html>
